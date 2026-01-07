@@ -1,0 +1,34 @@
+
+.footer {
+  background: #1a2230;
+  color: #bfc9d9;
+  text-align: center;
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  font-size: 1rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border-top: 1.5px solid #232a34;
+  box-shadow: 0 -2px 12px 0 rgba(44,62,80,0.08);
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.7rem;
+  flex-wrap: wrap;
+}
+.icon {
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.22s, color 0.22s;
+}
+.icon:hover {
+  color: #181e26;
+  background: linear-gradient(90deg, #4fd1c5 60%, #63b3ed 100%);
+}

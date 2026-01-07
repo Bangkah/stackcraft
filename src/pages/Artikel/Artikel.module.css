@@ -1,0 +1,70 @@
+
+.artikel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.artikel h1 {
+  color: #4fd1c5;
+  font-size: 2.1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.subtitle {
+  color: #bfc9d9;
+  font-size: 1.08rem;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card {
+  background: #232a34;
+  border: 1.5px solid #263043;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 12px 0 rgba(44,62,80,0.08);
+  transition: box-shadow 0.22s, transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.card:hover {
+  box-shadow: 0 8px 32px 0 rgba(79,209,197,0.13);
+  transform: translateY(-3px) scale(1.03);
+}
+.title {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.18rem;
+  color: #63b3ed;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.excerpt {
+  margin: 0 0 0.2rem 0;
+  color: #bfc9d9;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+.date {
+  color: #4fd1c5;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+@media (max-width: 700px) {
+  .artikel {
+    padding: 1.2rem 0.3rem 2rem 0.3rem;
+  }
+  .card {
+    padding: 1rem 0.5rem;
+  }
+}

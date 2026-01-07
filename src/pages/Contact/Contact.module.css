@@ -1,0 +1,72 @@
+.contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.contact h1 {
+  color: #4fd1c5;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #232a34;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+}
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+label {
+  color: #bfc9d9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+input, textarea {
+  background: #181e26;
+  color: #f5f7fa;
+  border: 1.5px solid #263043;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+input:focus, textarea:focus {
+  border: 1.5px solid #4fd1c5;
+  outline: none;
+}
+.submit {
+  background: #4fd1c5;
+  color: #181e26;
+  font-weight: 700;
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.submit:hover {
+  background: #63b3ed;
+  color: #181e26;
+  transform: translateY(-2px) scale(1.04);
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #bfc9d9;
+  font-size: 1rem;
+  text-align: center;
+}
