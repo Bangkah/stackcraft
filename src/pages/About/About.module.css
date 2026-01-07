@@ -8,8 +8,8 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.2rem;
   align-items: start;
 }
 .left {
@@ -98,36 +98,8 @@
   margin-left: 1rem;
   margin-bottom: 0;
 }
-.timelineSection h2 {
-  color: #63b3ed;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
-  text-align: left;
-}
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  border-left: 3px solid #63b3ed;
-  padding-left: 1.5rem;
-}
-.timelineItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  min-width: 0;
-}
-.timelineYear {
-  color: #4fd1c5;
-  font-size: 1.08rem;
-  font-weight: 700;
-  min-width: 60px;
-}
-.timelineDesc {
-  color: #bfc9d9;
-  font-size: 1.01rem;
-}
+
+/* Timeline dihapus, grid dan card dirapikan */
 .intro h1 {
   color: #4fd1c5;
   font-size: 2.3rem;

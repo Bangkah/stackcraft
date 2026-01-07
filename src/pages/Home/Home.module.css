@@ -1,3 +1,199 @@
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0 0.5rem 0;
+}
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.heroTitle {
+  font-size: 2.9rem;
+  color: #4fd1c5;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 16px #232a34cc;
+}
+.heroIllustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  max-width: 260px;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .heroIllustration {
+    margin: 0 auto;
+    min-width: 120px;
+    max-width: 180px;
+  }
+  .heroTitle {
+    font-size: 2.1rem;
+  }
+}
+.aboutSection {
+  background: #232a34;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(44,62,80,0.13);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.accentLine {
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #4fd1c5 60%, #63b3ed 100%);
+  border-radius: 2px;
+  margin: 1.2rem auto 1.2rem auto;
+}
+.visionList {
+  color: #bfc9d9;
+  font-size: 1.09rem;
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+  margin: 0 auto 1.2rem auto;
+  max-width: 700px;
+}
+.valuePropsSection h2 {
+  color: #63b3ed;
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  text-align: left;
+}
+.valueProps {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.valueCard {
+  background: linear-gradient(120deg, #232a34 60%, #263043 100%);
+  border: 2px solid #4fd1c5;
+  border-radius: 18px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 4px 24px 0 rgba(44,62,80,0.13);
+  transition: box-shadow 0.32s, transform 0.22s, border 0.22s, background 0.22s;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  min-width: 260px;
+  max-width: 400px;
+  flex: 1 1 0;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: fadeInCard 0.7s cubic-bezier(.4,.8,.4,1) forwards;
+}
+.valueCard:hover {
+  box-shadow: 0 12px 40px 0 rgba(79,209,197,0.18);
+  transform: translateY(-8px) scale(1.045);
+  border: 2.5px solid #63b3ed;
+  background: linear-gradient(120deg, #263043 60%, #232a34 100%);
+}
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.valueIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+.valueCard h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.13rem;
+  color: #4fd1c5;
+  font-weight: 700;
+}
+.valueCard p {
+  margin: 0;
+  color: #bfc9d9;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+.whySection h2 {
+  color: #63b3ed;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-align: left;
+}
+.whyList {
+  color: #bfc9d9;
+  font-size: 1.05rem;
+  list-style: disc inside;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+.servicesSection {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.detailBox {
+  background: #232a34;
+  border: 2px solid #63b3ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px 0 rgba(99,179,237,0.13);
+  margin: 2.5rem auto 0 auto;
+  max-width: 600px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.detailBox h2 {
+  color: #4fd1c5;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.detailBox p {
+  color: #bfc9d9;
+  font-size: 1.08rem;
+  text-align: center;
+}
+.closeBtn {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #63b3ed 60%, #4fd1c5 100%);
+  color: #181e26;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(99,179,237,0.08);
+  transition: background 0.22s, color 0.22s, transform 0.18s;
+}
+.closeBtn:hover {
+  background: linear-gradient(90deg, #4fd1c5 60%, #63b3ed 100%);
+  color: #181e26;
+  transform: translateY(-2px) scale(1.04);
+}
 .home {
   display: flex;
   flex-direction: column;
@@ -89,8 +285,18 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2.5rem;
   justify-content: center;
+  align-items: stretch;
+}
+.serviceIcon {
+  width: 44px;
+  height: 44px;
+  margin-right: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .tech {
   margin-top: 0.75rem;
