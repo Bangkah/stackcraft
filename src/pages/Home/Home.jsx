@@ -169,7 +169,7 @@ const Home = () => {
         <h2>Portofolio & Proyek Terbaik</h2>
         <p className={styles.projectDesc}>Inilah beberapa solusi digital yang telah kami bangun untuk klien dari berbagai industri. Setiap proyek dirancang untuk memberikan dampak nyata dan pertumbuhan bisnis.</p>
         <div className={styles.cards}>
-          {projects.map((p, idx) => (
+          {projects.map((p) => (
             <Card key={p.title} title={p.title} description={p.description} accent="#63b3ed">
               <div className={styles.tech}>{p.tech}</div>
             </Card>

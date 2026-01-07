@@ -70,8 +70,84 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.7rem;
+  margin-top: 1.2rem;
+}
+.projectCard {
+  background: linear-gradient(120deg, #232a34 60%, #263043 100%);
+  border: 2px solid #4fd1c5;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(44,62,80,0.13);
+  padding: 2.1rem 1.7rem 1.5rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  min-height: 220px;
+  cursor: pointer;
+  transition: box-shadow 0.32s, transform 0.22s, border 0.22s, background 0.22s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: fadeInCard 0.7s cubic-bezier(.4,.8,.4,1) forwards;
+}
+.projectCard:hover {
+  box-shadow: 0 12px 40px 0 rgba(79,209,197,0.18);
+  transform: translateY(-8px) scale(1.045);
+  border: 2.5px solid #63b3ed;
+  background: linear-gradient(120deg, #263043 60%, #232a34 100%);
+}
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.projects h1 {
+  color: #4fd1c5;
+  font-size: 2.3rem;
+  margin-bottom: 1.7rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.projectTitle {
+  color: #63b3ed;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.projectDesc {
+  color: #bfc9d9;
+  font-size: 1.08rem;
+  margin-bottom: 0.5rem;
+}
+.projectTech {
+  margin-top: 0.5rem;
+  color: #4fd1c5;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.modalOverlay {
+  /* ...existing code... */
+  animation: fadeInModal 0.3s cubic-bezier(.4,.8,.4,1);
+}
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.detailBox {
+  /* ...existing code... */
+  animation: fadeInDetail 0.4s cubic-bezier(.4,.8,.4,1);
+}
+@keyframes fadeInDetail {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
 }
 .tech {
   margin-top: 0.75rem;
