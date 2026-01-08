@@ -1,6 +1,4 @@
 
-import styles from './About.module.css';
-
 const valueProps = [
   {
     icon: (
@@ -54,78 +52,56 @@ const services = [
 const About = () => {
   const [selected, setSelected] = useState(null);
   return (
-    <div className={styles.about}>
-      <div className={styles.grid}>
-        <div className={styles.left}>
-          <section className={styles.intro}>
-            <h1>Tentang StackCraft</h1>
-            <p className={styles.subtitle}>
-              StackCraft adalah perusahaan teknologi modern yang berfokus pada solusi backend dan full-stack. Kami membantu tim dan bisnis membangun sistem digital yang scalable, aman, dan mudah dikembangkan.
-            </p>
-          </section>
-          <section className={styles.visionMission}>
-            <div className={styles.accentLine}></div>
-            <h2>Visi & Misi</h2>
-            <ul>
-              <li><strong>Visi:</strong> Memberdayakan bisnis Indonesia dengan fondasi teknologi yang kuat dan siap masa depan.</li>
-              <li><strong>Misi:</strong> Menyediakan solusi backend dan full-stack berkualitas tinggi untuk mendorong inovasi dan pertumbuhan bisnis.</li>
-            </ul>
-          </section>
-          <section className={styles.focus}>
-            <div className={styles.accentLine}></div>
-            <h2>Fokus Kami</h2>
-            <p>
-              Kami berfokus pada rekayasa backend, pengembangan API, arsitektur sistem, dan deployment cloud-native. Tim StackCraft siap membantu Anda membangun solusi digital yang scalable dan efisien.
-            </p>
-          </section>
-          <section className={styles.servicesSection}>
-            <div className={styles.accentLine}></div>
-            <h2>Layanan StackCraft</h2>
-            <div className={styles.cards}>
-              {services.map((s, idx) => (
-                <div key={s.title} onClick={() => setSelected(idx)} style={{cursor:'pointer', width:'100%'}}>
-                  <div className={styles.valueCard}>
-                    <h3>{s.title}</h3>
-                    <p>{s.description}</p>
-                  </div>
-                </div>
-              ))}
+    <div className="min-h-screen bg-slate-900 py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <section className="mb-16">
+          <div className="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-slate-800 rounded-2xl shadow-lg p-6 border-2 border-blue-400 flex flex-col gap-2">
+              <h2 className="text-xl font-bold text-cyan-400 mb-2">Visi</h2>
+              <p className="text-slate-200 text-base">Memberdayakan bisnis Indonesia dengan fondasi teknologi yang kuat dan siap masa depan.</p>
             </div>
-            {selected !== null && (
-              <div className={styles.detailBox}>
-                <h2>{services[selected].title}</h2>
-                <p>{services[selected].detail}</p>
-                <button className={styles.closeBtn} onClick={() => setSelected(null)}>Tutup</button>
+            <div className="bg-slate-800 rounded-2xl shadow-lg p-6 border-2 border-blue-400 flex flex-col gap-2">
+              <h2 className="text-xl font-bold text-cyan-400 mb-2">Misi</h2>
+              <p className="text-slate-200 text-base">Menyediakan solusi backend dan full-stack berkualitas tinggi untuk mendorong inovasi dan pertumbuhan bisnis.</p>
+            </div>
+            <div className="bg-slate-800 rounded-2xl shadow-lg p-6 border-2 border-blue-400 flex flex-col gap-2">
+              <h2 className="text-xl font-bold text-cyan-400 mb-2">Fokus</h2>
+              <p className="text-slate-200 text-base">Rekayasa backend, pengembangan API, arsitektur sistem, dan deployment cloud-native.</p>
+            </div>
+          </div>
+          <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-xl p-8 flex flex-col gap-3 border-2 border-blue-400 hover:scale-[1.04] hover:border-cyan-400 hover:shadow-2xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                style={{ animationDelay: `${0.1 + i * 0.13}s` }}
+                onClick={() => setSelected(i)}
+              >
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-cyan-400/10 rounded-full blur-2xl group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-lg font-bold text-blue-300 mb-1 group-hover:text-cyan-400 transition">{s.title}</div>
+                <div className="text-slate-200">{s.description}</div>
               </div>
-            )}
-          </section>
-        </div>
-        <div className={styles.right}>
-          <section className={styles.valuePropsSection}>
-            <h2>Value Proposition</h2>
-            <div className={styles.valueProps}>
-              {valueProps.map((v, i) => (
-                <div key={i} className={styles.valueCard}>
-                  <div className={styles.valueIcon}>{v.icon}</div>
-                  <div>
-                    <h3>{v.title}</h3>
-                    <p>{v.desc}</p>
-                  </div>
-                </div>
-              ))}
+            ))}
+          </div>
+          {selected !== null && (
+            <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setSelected(null)}>
+              <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/80 border-2 border-cyan-400 rounded-2xl shadow-2xl p-10 max-w-md w-full flex flex-col items-center animate-fadeIn backdrop-blur-xl" onClick={e => e.stopPropagation()}>
+                <h3 className="text-2xl font-bold text-cyan-400 mb-2 text-center">{services[selected].title}</h3>
+                <p className="text-slate-200 mb-4 text-center text-base leading-relaxed">{services[selected].detail}</p>
+                <button className="mt-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 font-bold px-8 py-2 rounded-lg shadow hover:scale-105 transition" onClick={() => setSelected(null)}>Tutup</button>
+              </div>
             </div>
-          </section>
-          <section className={styles.whySection}>
-            <h2>Why StackCraft?</h2>
-            <ul className={styles.whyList}>
+          )}
+          <div className="max-w-4xl mx-auto px-4 mt-16">
+            <h2 className="text-2xl font-bold text-blue-300 mb-4 text-center">Kenapa StackCraft?</h2>
+            <ul className="list-disc pl-6 text-slate-200 text-base grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
               <li>Tim berpengalaman di backend & cloud</li>
               <li>Solusi custom sesuai kebutuhan bisnis</li>
               <li>Fokus pada keamanan dan skalabilitas</li>
               <li>Support & konsultasi berkelanjutan</li>
             </ul>
-          </section>
-          {/* Timeline dihapus sesuai permintaan */}
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   );
